@@ -1,6 +1,7 @@
-const express    = require('express');
-const logger     = require('morgan');
-const bodyParser = require('body-parser');
+const express      = require('express');
+const logger       = require('morgan');
+const bodyParser   = require('body-parser');
+var homeController = require('./controllers/homeController')
 
 //Set up express app
 const app = express();
@@ -19,10 +20,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 // Default catch-all  route with welcome message
-app.get('*', (req, res) => res.status(200).send({
-  message: 'Welcome to the beginning of Nerd Bay.'
-}));
+// app.get('*', (req, res) => res.status(200).send({
+//   message: 'Welcome to the beginning of Nerd Bay.'
+// }));
 
+//Fire Controllers
+homeController(app);
 
 app.listen(3000);
 console.log('Listening to port 3000...')
