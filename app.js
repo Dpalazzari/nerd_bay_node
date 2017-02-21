@@ -22,6 +22,11 @@ app.use(bodyParser.urlencoded({extended: false}));
 // Default Home Page
 app.get('/', function(req, res){
   res.render('home');
+  console.log("Home page");
+});
+app.get('/about', function(req, res){
+  res.render('about');
+  console.log("About page");
 });
 
 //Fire Controllers
