@@ -35,3 +35,10 @@ ul.horizontal li a {
   font-family: courier;
   margin: 1% 1% 1% 1%;
 }
+.nerd-bay{
+  height: 50%;
+  width: 50%;
+}
+.home div{
+  display: inline-block;
+}
