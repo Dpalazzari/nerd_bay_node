@@ -39,6 +39,6 @@ ul.horizontal li a {
   height: 50%;
   width: 50%;
 }
-.home div{
-  display: inline-block;
+.home p {
+  text-indent: 25px;
 }
