@@ -1,0 +1,44 @@
+/*Nav Bar css*/
+
+ul.horizontal {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+ul.horizontal li {
+  float: left;
+}
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+ul.horizontal li a.active {
+  background-color: #418CAB;
+}
+ul.horizontal li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.rightli {
+  float: right;
+}
+
+/*Body css*/
+.home {
+  background-color: #000538;
+  color: white;
+  font-family: courier;
+  margin: 1% 1% 1% 1%;
+}
+.nerd-bay{
+  height: 50%;
+  width: 50%;
+}
+.home p {
+  text-indent: 25px;
+}
