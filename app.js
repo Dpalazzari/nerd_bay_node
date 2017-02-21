@@ -1,16 +1,21 @@
 require('dotenv').config()
 var User              = require('./server/models/user');
 var express           = require('express');
+var logger            = require('morgan');
 var bodyParser        = require('body-parser');
 var session           = require('express-session');
 var passport          = require('passport');
 var FacebookStrategy  = require('passport-facebook');
+var models            = require('./server/models');
 
 //Set up express app
 var app = express();
 
 //Set up template engine
 app.set('view engine', 'ejs');
+
+// Log requests to the console
+app.use(logger('dev'));
 
 // Static Files
 app.use(express.static('./public'));
@@ -78,6 +83,8 @@ app.get('/profile', function(req, res){
 
 app.listen(3000);
 console.log('Listening to port 3000...');
-console.log(process.env.FACEBOOK_APP_ID);
-console.log(process.env.FACEBOOK_APP_SECRET);
+console.log(models.users)
+// console.log(process.env.FACEBOOK_APP_ID);
+// console.log(process.env.FACEBOOK_APP_SECRET);
+
 module.exports = app;
