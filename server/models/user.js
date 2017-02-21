@@ -7,16 +7,17 @@ module.exports = function(sequelize, DataTypes) {
     avatar: DataTypes.STRING,
     password: DataTypes.STRING
   }, {
-    freezeTableName: true
-    instanceMethods: {
-      generateHash: function(password) {
-        return bcrypt.hashSync(password, bcrypt.genSaltSync(10), null);
-      },
-      validPassword: function(password){
-        return bcrypt.compareSync(password, this.password);
-      },
-    }
-  }, {
+  // , {
+  //   freezeTableName: true
+  //   instanceMethods: {
+  //     generateHash: function(password) {
+  //       return bcrypt.hashSync(password, bcrypt.genSaltSync(10), null);
+  //     },
+  //     validPassword: function(password){
+  //       return bcrypt.compareSync(password, this.password);
+  //     },
+  //   }
+  // }, {
     classMethods: {
       associate: function(models) {
         // associations can be defined here
