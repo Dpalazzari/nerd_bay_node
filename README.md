@@ -5,3 +5,5 @@ This app aims to achieve three goals:
 2) Make a personal project the author is proud of.
 
 3) Learn how to effectively test in a tech stack that is mostly a mystery. 
+
+* This project has been put on the back burner for now *
